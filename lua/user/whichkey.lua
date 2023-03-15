@@ -160,7 +160,7 @@ lvim.builtin.which_key.mappings["w"] = nil
 
 local m_opts = {
   mode = "n", -- NORMAL mode
-  prefix = "m",
+  prefix = "m", -- the key mapping will be shown only if the option key is pressed followed by 'm' 
   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true, -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
@@ -176,20 +176,21 @@ local m_mappings = {
   a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
   c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
   b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
-  m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
-  ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
-  [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
   l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
   j = { "<cmd>silent BookmarkNext<cr>", "Next" },
-  s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
   k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
   S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
+  x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
+  m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Add files Harpoon" },
+  r = { '<cmd>lua require("harpoon.mark").clear_all()<cr>', "Remove All Files Harpoon" },
+  ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
+  [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
+  s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
+  [";"] = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon UI" },
   -- s = {
   --   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
   --   "Show",
   -- },
-  x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
-  [";"] = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon UI" },
 }
 
 which_key.register(m_mappings, m_opts)

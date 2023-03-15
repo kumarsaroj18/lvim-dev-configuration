@@ -22,9 +22,16 @@ local mappings = {
     f = { "<cmd>TypescriptFixAll<Cr>", "FixAll" },
     g = { "<cmd>TypescriptGoToSourceDefinition<Cr>", "GoToSourceDefinition" },
   },
+  J = {
+    name = "JestRunners",
+    i = { "<cmd>TypescriptAddMissingImports<Cr>", "AddMissingImports" },
+    o = { "<cmd>TypescriptOrganizeImports<cr>", "OrganizeImports" },
+    u = { "<cmd>TypescriptRemoveUnused<Cr>", "RemoveUnused" },
+    r = { "<cmd>TypescriptRenameFile<Cr>", "RenameFile" },
+    f = { "<cmd>TypescriptFixAll<Cr>", "FixAll" },
+    g = { "<cmd>TypescriptGoToSourceDefinition<Cr>", "GoToSourceDefinition" },
+  },
 }
 
 which_key.register(mappings, opts)
-
-
 

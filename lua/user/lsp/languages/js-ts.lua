@@ -43,7 +43,7 @@ require("dap-vscode-js").setup {
   adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
 }
 
-for _, language in ipairs { "typescript", "javascript" } do
+for _, language in ipairs { "typescript", "javascript", "typescriptreact" } do
   require("dap").configurations[language] = {
     {
       type = "pwa-node",

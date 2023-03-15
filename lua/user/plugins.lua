@@ -44,6 +44,9 @@ lvim.plugins = {
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
   "renerocksai/calendar-vim",
+  "Pocco81/dap-buddy.nvim",
+  "nvim-telescope/telescope-dap.nvim",
+  "david-kunz/jester.nvim",
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
@@ -96,6 +99,7 @@ lvim.plugins = {
       }
     end,
   },
+  {"mhinz/vim-startify"},
   -- "MunifTanjim/nui.nvim",
   -- {
   --   "folke/noice.nvim",

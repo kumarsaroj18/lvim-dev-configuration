@@ -15,7 +15,7 @@ lvim.builtin.treesitter.ensure_installed = { "javascript" }
 lvim.builtin.treesitter.autotag.enable = true -- This line enables automatic closing of HTML/XML tags in insert mode when the opening angle bracket < is typed.
 lvim.builtin.treesitter.auto_install = false  -- This line disables automatic installation of Treesitter parsers for languages that are not already installed. If you open a file in a language for which a parser is not installed, you will be prompted to manually install it.
 
-lvim.builtin.treesitter.ignore_install = { "markdown" }
+-- lvim.builtin.treesitter.ignore_install = { "markdown" }
 
 lvim.builtin.treesitter.textobjects = {
   select = {
