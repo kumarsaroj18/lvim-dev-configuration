@@ -37,16 +37,18 @@ lvim.plugins = {
   "sindrets/diffview.nvim",
   "simrat39/rust-tools.nvim",
   "olexsmir/gopher.nvim",
-  "leoluz/nvim-dap-go",
-  "mfussenegger/nvim-dap-python",
   "jose-elias-alvarez/typescript.nvim",
-  "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
   "renerocksai/calendar-vim",
+
+  -- DAP
+  "mfussenegger/nvim-dap-python",
+  "mxsdev/nvim-dap-vscode-js",
+  "leoluz/nvim-dap-go",
   "Pocco81/dap-buddy.nvim",
   "nvim-telescope/telescope-dap.nvim",
-  "david-kunz/jester.nvim",
+  "klen/nvim-test",
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
